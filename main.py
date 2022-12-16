@@ -19,6 +19,16 @@ def starting_position():
     return hero_class
 
 
+def victory_condition(h_class, location):
+    victory_location = 'Landing bay'
+
+    if location == victory_location and h_class == 'Adeptus Mechanicus':
+        print('Finally you entered landing aby. With pilot within your squad, you can now escape. \n '
+              'The End ')
+
+
+
+
 
 
 
@@ -47,6 +57,11 @@ def main_way():
 def main():
     starting_position()
     print(starting_position())
+    hero = starting_position()
+    location = 'Landing bay'
+    victory_condition(hero, location)
+    print()
+
 
 if __name__ == '__main__':
     main()
